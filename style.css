@@ -1,0 +1,168 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Text--dark--desaturated--blue: hsl(238, 29%, 16%)
+    --Text--Soft--red: hsl(14, 88%, 65%)
+    --Text--Ver--dark--grayish--blue: hsl(237, 12%, 33%)
+    --Dark--grayish--blue: hsl(240, 6%, 50%)
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+h1 {
+    margin-bottom: 30px;
+}
+
+hr {
+    margin: 20px 0 ;
+    border: none;
+    border: 1px solid rgba(224, 224, 224, 0.589);
+}
+
+.container {
+    display: flex;
+    max-width: 1440px;
+    margin: 190px auto;
+    width: fit-content;
+    background: white;
+    border-radius: 20px;
+    padding: 50px 50px 50px 0;
+    box-shadow: 4px 4px 14px 4px rgba(0, 0, 0, 0.24);
+    
+} 
+
+
+
+
+.cube {
+    position: absolute;
+    top: 80px;
+    left: -90px;
+    transition: all 0.5s;
+}
+
+.left {
+    height: 100%;
+    position: relative;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.right {
+    margin-left: 90px;
+}
+
+.right p {
+    margin-right: 70px;
+}
+
+.arrow {
+    position: absolute;
+    right: 0;
+    margin-top: 7px;
+    transition: all 0.5s;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+
+.questions {
+    position: relative;
+    width: fit-content;
+    max-width: 380px;
+}
+
+.more-info {
+    display: none;
+    margin-top: 20px;
+}
+
+.more-info-show {
+    display: block;
+}
+
+.cube-move {
+    left: -115px;
+}
+
+
+@media (max-width: 800px) {
+
+    body {
+        overflow: hidden;
+    }
+    .container {
+        display: block;
+        max-width: 800px;
+        margin-top: 90px;
+        padding: 0 50px 30px 50px;
+    }
+
+    .right {
+        margin-left: 0;
+    }
+
+    .left {
+        margin-left: 30px;
+        background-image: none;
+    }
+
+    .women {
+        width: 200px;
+        top: -80px;
+        z-index: 1;
+    }
+
+
+    .cube {
+        width: 100px;
+        top: 26px;
+        left: -20px;
+        z-index: 2;
+    }
+
+    .questions {
+        max-width: 270px;
+    }
+
+    .main {
+        margin-top: 40px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 15px;
+
+    }
+
+    .cube-media-move {
+        top: 10px;
+    }
+}
